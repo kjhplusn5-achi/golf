@@ -2,7 +2,7 @@ name: daily-run
 
 on:
   schedule:
-    - cron: "30 59 5 * * *"   # 한국시간 14:59:30 (UTC 05:59:30)
+    - cron: "59 5 * * *"   # 한국시간 14:59:30 (UTC 05:59:30)
   workflow_dispatch:
 
 jobs:
