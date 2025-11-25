@@ -1,0 +1,14 @@
+name: daily-run
+
+on:
+  schedule:
+    - cron: "30 59 5 * * *"   # 한국시간 14:59:30 (UTC 05:59:30)
+  workflow_dispatch:
+
+jobs:
+  call-cloud-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Cloud Run auto-now URL
+        run: |
+          curl -X GET "https://golf-app-790502179616.asia-northeast3.run.app/auto?test=now"
